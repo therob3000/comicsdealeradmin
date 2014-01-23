@@ -14,6 +14,7 @@
 		global $cadenaColumnas;
 
 		$queryPedidosPendientes = $cadenaColumnas . " WHERE pedido_estado = 0";
+		echo $queryPedidosPendientes;
 		$resultado = ejecutarQuery($queryPedidosPendientes);
 		$json ->pendientes = $resultado;
 		return $json;
@@ -75,8 +76,8 @@
 		global $respuestaJSON;
 		
 		$respuestaJSON = array();
-		$query 	= mysql_query($queryAsk);
 		echo $query;
+		$query 	= mysql_query($queryAsk);
 		$num 	= mysql_num_rows($query);
 
 		if($num >= 0){
