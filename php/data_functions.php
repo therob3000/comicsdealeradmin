@@ -7,7 +7,7 @@
 
 	$respuestaJSON 	= array();
 	$json 			= new stdClass();
-	$cadenaColumnas = "SELECT pedido_id, pedido_compania_id, pedido_personaje_id, pedido_textolibre, pedido_lugar_entrega, pedido_forma_pago_id, pedido_fecha FROM pedidos";
+	$cadenaColumnas = "SELECT pedido_usuario_id, pedido_id, pedido_compania_id, pedido_personaje_id, pedido_textolibre, pedido_lugar_entrega, pedido_forma_pago_id, pedido_fecha FROM pedidos";
 
 	function mostrarPedidosPendientes(){
 		global $usuario_id;
@@ -65,6 +65,14 @@
 		return $resNombrePago;
 	}
 
+	function buscarNombreUsuario($pedido_usuario_id){
+		$query = "SELECT usuario_nombre FROM usuarios WHERE usuario_id = $pedido_usuario_id";
+		$queryNombreUsuario = mysql_query($query);
+		$resNombreUsuario = mysql_result($queryNombreUsuario, 0, "usuario_nombre");
+
+		return $resNombreUsuario;
+	}
+
 	function ejecutarQuery($queryAsk){
 		global $respuestaJSON;
 		
@@ -81,10 +89,12 @@
 				$pedido_lugar_entrega	= mysql_result($query, $i, "pedido_lugar_entrega");
 				$pedido_forma_pago_id 	= mysql_result($query, $i, "pedido_forma_pago_id");
 				$pedido_fecha 			= mysql_result($query, $i, "pedido_fecha");
+				$pedido_usuario_id		= mysql_result($query, $i, "pedido_usuario_id");
 
 				$compania_nombre 	= buscarNombreEmpresa($pedido_compania_id);
 				$personaje_nombre 	= buscarNombrePersonaje($pedido_personaje_id);
 				$formaPago_nombre	= buscarFormaDePago($pedido_forma_pago_id);
+				$usuario_nombre 	= buscarNombreUsuario($pedido_usuario_id);
 
 				$respuestaJSON[] = array('pedido_id' => $pedido_id,
 										 'compania_nombre' => $compania_nombre,
@@ -92,7 +102,8 @@
 										 'pedido_textolibre' => $pedido_textolibre,
 										 'pedido_lugar_entrega' => $pedido_lugar_entrega,
 										 'formaPago_nombre' => $formaPago_nombre,
-										 'pedido_fecha' => $pedido_fecha
+										 'pedido_fecha' => $pedido_fecha,
+										 'usuario_nombre' => $usuario_nombre
 				);
 			}
 		}
