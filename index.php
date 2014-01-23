@@ -14,13 +14,13 @@
   <script src="bootstrap/js/bootstrap.min.js"></script>
   <script src="js/index.js"></script>
   <style type="text/css">
-  .container-full{
-    width: 100%
-    margin: auto;
-  }
+    .container-full{
+      width: 100%
+      margin: auto;
+    }
 
   </style>
-<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
       <script src="../../assets/js/html5shiv.js"></script>
       <script src="../../assets/js/respond.min.js"></script>
@@ -39,21 +39,31 @@
 
         <div class="col-md-10" id="maincontent">
           <div class="panel panel-default">
-  <div class="panel-heading">Panel heading without title</div>
-  <div class="panel-body">
-    Panel content
-  </div>
-</div>
+            <div class="panel-heading">
+              <h3 class="panel-title">Pedidos</h3>
+            </div>
+            <div class="panel-body">
+              <table class="table table-hover">
 
-<div class="panel panel-default">
-  <div class="panel-heading">
-    <h3 class="panel-title">Panel title</h3>
-  </div>
-  <div class="panel-body">
-    Panel content
-  </div>
-</div>
+                <thead>
+                  <tr>
+                    <th>Pedido Id</th>
+                    <th>Usuario</th><!--Nombre-->
+                    <th>Compañía</th><!--Nombre-->
+                    <th>Personaje</th><!--Nombre-->
+                    <th>Descripción</th>
+                    <th>Lugar</th>
+                    <th>Forma de Pago</th>
+                    <th>Fecha</th>
+                  </tr>
+                </thead>
+                <tbody id="pedidos">
+                 
+                </tbody>
+              </table>
 
+            </div>
+          </div>
 
         </div>
         

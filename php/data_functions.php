@@ -10,7 +10,6 @@
 	$cadenaColumnas = "SELECT pedido_usuario_id, pedido_id, pedido_compania_id, pedido_personaje_id, pedido_textolibre, pedido_lugar_entrega, pedido_forma_pago_id, pedido_fecha FROM pedidos";
 
 	function mostrarPedidosPendientes(){
-		global $usuario_id;
 		global $json;
 		global $cadenaColumnas;
 
@@ -21,7 +20,6 @@
 	}
 
 	function mostrarPedidosResueltos(){
-		global $usuario_id;
 		global $json;
 		global $cadenaColumnas;
 
@@ -31,7 +29,6 @@
 	}
 
 	function mostrarPedidosCancelados(){
-		global $usuario_id;
 		global $json;
 		global $cadenaColumnas;
 
@@ -42,6 +39,7 @@
 	}
 
 	function buscarNombreEmpresa($pedido_compania_id){
+
 		$query = "SELECT compania_nombre FROM companias WHERE compania_id = $pedido_compania_id";
 		$queryNombreEmpresa = mysql_query($query);
 		$resNombreEmpresa = mysql_result($queryNombreEmpresa, 0, "compania_nombre");
@@ -78,6 +76,7 @@
 		
 		$respuestaJSON = array();
 		$query 	= mysql_query($queryAsk);
+		echo $query;
 		$num 	= mysql_num_rows($query);
 
 		if($num >= 0){
