@@ -1,0 +1,37 @@
+body { 
+  background: url(../../img/Background-02.png) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+          
+.navbar-brand { font-size: 22px;}
+.highlight {
+  padding: 9px 14px;
+  margin-top: 14px;
+  margin-bottom: 14px;
+  background-color: #fff;
+  border: 1px solid #000;
+  border-radius: 9px;
+}
+.container .segu {
+  max-width: 730px;
+  background-color: #fff;
+}
+.container .tres {
+  max-width: 1024px;
+}
+.container {
+  max-width: 1150px;
+  margin-bottom: 20px; 
+}
+.jumbotron {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.navbar {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
