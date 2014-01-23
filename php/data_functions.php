@@ -75,7 +75,6 @@
 		global $respuestaJSON;
 		
 		$respuestaJSON = array();
-		echo $query;
 		$query 	= mysql_query($queryAsk);
 		$num 	= mysql_num_rows($query);
 
