@@ -8,6 +8,7 @@ $(document).ready(function(){
 				$("#pedidos").find("#row").attr('id', val.pedido_id);
 				$("#"+val.pedido_id).find("#pedido_id").text(val.pedido_id);
 				$("#"+val.pedido_id).find("#nombre_usuario").text(val.usuario_nombre);
+				$("#"+val.pedido_id).find("#correo_usuario").text(val.usuario_correo);
 				$("#"+val.pedido_id).find("#compania").text(val.compania_nombre);
 				$("#"+val.pedido_id).find("#personaje").text(val.personaje_nombre);
 				$("#"+val.pedido_id).find("#descripcion").text(val.pedido_textolibre);

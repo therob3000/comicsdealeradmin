@@ -71,6 +71,14 @@
 		return $resNombreUsuario;
 	}
 
+	function buscaCorreoUsuario($pedido_usuario_id){
+		$query = "SELECT usuario_email FROM usuarios WHERE usuario_id = $pedido_usuario_id";
+		$queryCorreoUsuario = mysql_query($query);
+		$resCorreoUsuario = mysql_result($queryCorreoUsuario, 0, "usuario_email");
+
+		return $resCorreoUsuario;
+	}
+
 	function ejecutarQuery($queryAsk){
 		global $respuestaJSON;
 		
@@ -93,6 +101,7 @@
 				$personaje_nombre 	= buscarNombrePersonaje($pedido_personaje_id);
 				$formaPago_nombre	= buscarFormaDePago($pedido_forma_pago_id);
 				$usuario_nombre 	= buscarNombreUsuario($pedido_usuario_id);
+				$usuario_correo		= buscaCorreoUsuario($pedido_usuario_id);
 
 				$respuestaJSON[] = array('pedido_id' => $pedido_id,
 										 'compania_nombre' => $compania_nombre,
@@ -101,7 +110,8 @@
 										 'pedido_lugar_entrega' => $pedido_lugar_entrega,
 										 'formaPago_nombre' => $formaPago_nombre,
 										 'pedido_fecha' => $pedido_fecha,
-										 'usuario_nombre' => $usuario_nombre
+										 'usuario_nombre' => $usuario_nombre,
+										 'usuario_correo' => $usuario_correo,
 				);
 			}
 		}
