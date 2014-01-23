@@ -1,7 +1,7 @@
 $(document).ready(function(){
 	$("#navbar").load("../html/layouts/navbar_layout.html");
 	$("#sidebar").load("../html/layouts/sidebar_layout.html");
-	$.post("../php/pedidos_pendientes", function(data){
+	$.post("../php/pedidos_pendientes.php", function(data){
 		$.each(data.pendientes, function(i, val){
 			$.get("../html/layouts/pedido_layout.html", function(data){
 				$("#pedidos").append(data);
