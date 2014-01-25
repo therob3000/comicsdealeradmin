@@ -4,18 +4,20 @@
 
 	ini_set('display_errors',1);
 	error_reporting(E_ALL);
-
+	
 	$respuestaJSON 	= array();
 	$json 			= new stdClass();
 	$cadenaColumnas = "SELECT pedido_usuario_id, pedido_id, pedido_compania_id, pedido_personaje_id, pedido_textolibre, pedido_lugar_entrega, pedido_forma_pago_id, pedido_fecha FROM pedidos";
-
-	function mostrarPedidosPendientes(){
+											
+	function mostrarPedidosPendientes($saltoNuevo,$rango){
 		global $json;
 		global $cadenaColumnas;
 
-		$queryPedidosPendientes = $cadenaColumnas . " WHERE pedido_estado = 0";
+		$queryPedidosPendientes = $cadenaColumnas . " WHERE pedido_estado = 0 LIMIT $saltoNuevo, $rango";
 		$resultado = ejecutarQuery($queryPedidosPendientes);
+		$registros = contarRegistros(0);
 		$json ->pendientes = $resultado;
+		$json ->registros = $registros;
 		return $json;
 	}
 
@@ -119,5 +121,19 @@
 		return $respuestaJSON;
 
 	}
+
+	function contarRegistros($pedido_estado){
+		//$pedido = 0 -> Pendientes
+		//$pedido = 1 -> Resueltos
+		//$pedido = 2 -> Cancelados
+		$queryCount 	= "SELECT COUNT(*) FROM pedidos WHERE pedido_estado = $pedido_estado";
+		$resultado 		= mysql_query($queryCount);
+		$numero_pedidos = mysql_result($resultado, 0);
+
+		return $numero_pedidos;
+
+	}
+
+
 
 ?>

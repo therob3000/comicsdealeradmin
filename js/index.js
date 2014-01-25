@@ -1,7 +1,15 @@
+var rango = 5
 $(document).ready(function(){
 	$("#navbar").load("../html/layouts/navbar_layout.html");
 	$("#sidebar").load("../html/layouts/sidebar_layout.html");
-	$.post("../php/pedidos_pendientes.php", function(data){
+	mostrarPedidos(0,rango);
+});
+
+function mostrarPedidos(saltoPrevio,rango){
+	cadena = 'saltoPrevio='+saltoPrevio+"&rango="+rango;
+	$.get("../php/pedidos_pendientes.php",
+		cadena,
+		function(data){
 		$.each(data.pendientes, function(i, val){
 			$.get("../html/layouts/pedido_layout.html", function(data){
 				$("#pedidos").append(data);
@@ -18,5 +26,17 @@ $(document).ready(function(){
 			});
 			
 		});
+		paginacion(data.registros, saltoPrevio);
 	},'json');
-});
+}
+
+function paginacion(registros, saltoPrevio){
+	paginas = Math.ceil(registros/rango);
+		for(var i = 0; i < paginas; i++){
+			if(i == Math.round(saltoPrevio/rango))
+				$("#paginacion").append("<li class='active'><a href='#'>"+(i+1)+"<span class='sr-only'>(current)</span></a></li>");
+			else
+				$("#paginacion").append("<li><a href='#'>"+(i+1)+"</a></li>");
+		}
+
+}
