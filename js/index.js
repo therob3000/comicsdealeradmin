@@ -52,15 +52,8 @@ function paginacion(registros, saltoPrevioPag){
 function clickPaginacion(){
 	$("#paginacion").on( "click", "#paginaInactiva", function(){
 		paginaClick = $(this).text();
-		if(paginaClick > pagina){
-			//alert("la pagina es mayor que la anterior");
-			saltoPrevio = saltoPrevio + rango;
-			mostrarPedidos(saltoPrevio,rango);
-		}
-		else{
-			//alert("la pagina es menor");
-			saltoPrevio = saltoPrevio - rango;
-			mostrarPedidos(saltoPrevio, rango);
-		}
+		
+		saltoPrevio = (paginaClick-1) * rango;
+		mostrarPedidos(saltoPrevio,rango);
 	});
 }
