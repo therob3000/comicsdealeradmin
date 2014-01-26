@@ -1,11 +1,16 @@
-var rango = 5
+var rango = 5;
+var pagina;
+var saltoPrevio;
 $(document).ready(function(){
 	$("#navbar").load("../html/layouts/navbar_layout.html");
 	$("#sidebar").load("../html/layouts/sidebar_layout.html");
 	mostrarPedidos(0,rango);
+	clickPaginacion();
 });
 
 function mostrarPedidos(saltoPrevio,rango){
+	$("#pedidos").empty();
+	$("#paginacion").empty();
 	cadena = 'saltoPrevio='+saltoPrevio+"&rango="+rango;
 	$.get("../php/pedidos_pendientes.php",
 		cadena,
@@ -26,17 +31,36 @@ function mostrarPedidos(saltoPrevio,rango){
 			});
 			
 		});
+		$("#totalPedidos").text(data.registros);
 		paginacion(data.registros, saltoPrevio);
 	},'json');
 }
 
-function paginacion(registros, saltoPrevio){
+function paginacion(registros, saltoPrevioPag){
 	paginas = Math.ceil(registros/rango);
 		for(var i = 0; i < paginas; i++){
-			if(i == Math.round(saltoPrevio/rango))
-				$("#paginacion").append("<li class='active'><a href='#'>"+(i+1)+"<span class='sr-only'>(current)</span></a></li>");
+			if(i == Math.round(saltoPrevioPag/rango)){
+				$("#paginacion").append("<li class='active' id='paginaActiva'><a>"+(i+1)+"<span class='sr-only'>(current)</span></a></li>");
+				pagina = i+1;
+			}
 			else
-				$("#paginacion").append("<li><a href='#'>"+(i+1)+"</a></li>");
+				$("#paginacion").append("<li id='paginaInactiva'><a>"+(i+1)+"</a></li>");
 		}
+	saltoPrevio = saltoPrevioPag;	
+}
 
+function clickPaginacion(){
+	$("#paginacion").on( "click", "#paginaInactiva", function(){
+		paginaClick = $(this).text();
+		if(paginaClick > pagina){
+			//alert("la pagina es mayor que la anterior");
+			saltoPrevio = saltoPrevio + rango;
+			mostrarPedidos(saltoPrevio,rango);
+		}
+		else{
+			//alert("la pagina es menor");
+			saltoPrevio = saltoPrevio - rango;
+			mostrarPedidos(saltoPrevio, rango);
+		}
+	});
 }
