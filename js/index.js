@@ -1,9 +1,10 @@
-var rango = 5;
+var rango = 10;
 var pagina;
 var saltoPrevio;
 $(document).ready(function(){
 	$("#navbar").load("../html/layouts/navbar_layout.html");
 	$("#sidebar").load("../html/layouts/sidebar_layout.html");
+	$("#modal").load("../html/layouts/modal_pedido_pendiente.html");
 	mostrarPedidos(0,rango);
 	clickPaginacion();
 });
@@ -56,4 +57,8 @@ function clickPaginacion(){
 		saltoPrevio = (paginaClick-1) * rango;
 		mostrarPedidos(saltoPrevio,rango);
 	});
+}
+
+function clickMenu(){
+
 }
