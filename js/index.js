@@ -4,7 +4,7 @@ var saltoPrevio;
 $(document).ready(function(){
 	$("#navbar").load("../html/layouts/navbar_layout.html");
 	$("#sidebar").load("../html/layouts/sidebar_layout.html");
-	$("#modal").load("../html/layouts/modal_pedido_pendiente.html");
+	$("#modal").load("../html/layouts/modal_pedido_pendiente_layout.html");
 	mostrarPedidos(0,rango);
 	clickPaginacion();
 });
@@ -29,7 +29,7 @@ function mostrarPedidos(saltoPrevio,rango){
 				$("#"+val.pedido_id).find("#lugar_entrega").text(val.pedido_lugar_entrega);
 				$("#"+val.pedido_id).find("#forma_pago").text(val.formaPago_nombre);
 				$("#"+val.pedido_id).find("#fecha_pedido").text(val.pedido_fecha);
-				$("#"+val.pedido_id).find("#editar_boton").html("<button type='button' class='btn btn-info'>Info</button>");
+				$("#"+val.pedido_id).find("#editar_boton").append("<button type='button' class='btn btn-info'>Info</button>");
 			});
 			
 		});

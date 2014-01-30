@@ -29,6 +29,9 @@
     <body>
       <!-- Inicia Container Principal -->
       <div class="container-full">
+        <div id="modal">
+        
+        </div>
         <div id="navbar">
 
         </div>
@@ -43,24 +46,30 @@
               <h3 class="panel-title">Pedidos</h3>
             </div>
             <div class="panel-body">
-              <table class="table table-hover">
+              <table class="table table-condensed">
 
                 <thead>
                   <tr>
-                    <th>Pedido Id</th>
+                    <th>Ped Id</th>
                     <th>Usuario</th><!--Nombre-->
+                    <th>Correo</th>
                     <th>Compañía</th><!--Nombre-->
                     <th>Personaje</th><!--Nombre-->
                     <th>Descripción</th>
                     <th>Lugar</th>
                     <th>Forma de Pago</th>
                     <th>Fecha</th>
+                    <th>Editar</th>
                   </tr>
                 </thead>
                 <tbody id="pedidos">
-                 
+
                 </tbody>
               </table>
+              <ul class="pagination" id="paginacion">
+                
+              
+              </ul>
 
             </div>
           </div>
