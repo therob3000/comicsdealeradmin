@@ -16,7 +16,7 @@ function mostrarPedidos(saltoPrevio,rango){
 	$("#pedidos").empty();
 	$("#paginacion").empty();
 	cadena = 'saltoPrevio='+saltoPrevio+"&rango="+rango;
-	$.get("../php/pedidos_pendientes.php",
+	$.get("/php/pedidos_pendientes.php",
 		cadena,
 		function(data){
 		$.each(data.pendientes, function(i, val){
