@@ -12,7 +12,7 @@
 
   <script src="bootstrap/assets/js/jquery.js"></script>
   <script src="bootstrap/js/bootstrap.min.js"></script>
-  <script src="js/index.js"></script>
+  <script src="js/pedidos.js"></script>
   <style type="text/css">
     .container-full{
       width: 100%
