@@ -1,13 +1,11 @@
 $(document).ready(function(){
 	$("#navbar").load("../html/layouts/navbar_layout.html");
-	$("#sidebar").load("../html/layouts/sidebar_layout.html", function(){
-		$("#sidebar").find("#2").attr("class", "active");
+	$("#sidebar").load("../html/layouts/sidebar_layout.html",function(){
+		$("#sidebar").find("#3").attr("class","active");
 	});
-	
 	$("#modal").load("../html/layouts/modal_pedido_pendiente_layout.html");
 	cargarCompanias();
 	cargarPersonajes();
-	submitComic();
 });
 
 function cargarCompanias(){
@@ -36,23 +34,5 @@ function cargarPersonajes(){
 				});
 			},
 			'json');
-	});
-}
-
-function submitComic(){
-	$('#comic').submit(function(e){
-		console.log($(this).serialize());
-		$.post("../php/altaComic.php",
-			$(this).serialize(),
-			function(data){
-				if(data.exito == true){
-					alert("Exito");
-				}
-				else{
-					alert("Error");
-				}
-			},
-			'json');
-		e.preventDefault();
 	});
 }

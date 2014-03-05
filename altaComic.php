@@ -43,7 +43,7 @@
         <div class="col-md-10" id="maincontent">
           <div class="panel panel-default">
             <div class="panel-heading">
-              <h3 class="panel-title">Pedidos</h3>
+            <h3 class="panel-title">Alta de Comic.</h3>
             </div>
             <div class="panel-body">
               <form class="form" role="form" id="comic">
@@ -117,11 +117,11 @@
                   </div>
 
                   <div class="col-md-3">
-                  <div class="form-group">
-                    <button class="btn btn-success" type="submit">Guardar</button>  
+                    <div class="form-group">
+                      <button class="btn btn-success" type="submit">Guardar</button>  
                     </div>
                   </div>
-               
+
                 </div>
 
 
