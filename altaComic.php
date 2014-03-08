@@ -100,19 +100,19 @@
                       <div class="col-md-3">
                         <div class="form-group">
                           <label class="control-label">Numero de Tomo: </label>
-                          <input type="text" class="form-control" id="inputEmail3" placeholder="Titulo del Comic" name="cat_comic_numero_ejemplar">
+                          <input type="text" class="form-control" id="inputEmail3" placeholder="Numero del Tomo" name="cat_comic_numero_ejemplar">
                         </div>
                       </div>
                       <div class="col-md-3">
                        <div class="form-group">
                         <label class="control-label">URL de Imagen: </label>
-                        <input type="text" class="form-control" id="inputEmail3" placeholder="Titulo del Comic" name="cat_comic_imagen_url">
+                        <input type="text" class="form-control" id="inputEmail3" placeholder="URL de Imagen" name="cat_comic_imagen_url">
                       </div>
                     </div>
                     <div class="col-md-3">
                      <div class="form-group">
                       <label class="control-label">Precio de Portada: </label>
-                      <input type="text" class="form-control" id="inputEmail3" placeholder="Titulo del Comic" name="cat_comic_precio_portada">
+                      <input type="text" class="form-control" id="inputEmail3" placeholder="Precio de Portada" name="cat_comic_precio_portada">
                     </div>
                   </div>
 

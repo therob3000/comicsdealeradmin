@@ -25,7 +25,7 @@ function cargarCompanias(){
 
 function cargarPersonajes(){
 	$('#compania').change(function() {
-		alert($('#compania').serialize());
+		//alert($('#compania').serialize());
 		$('#personaje').empty();
 		$.get("/php/cargarPersonajes.php",
 			$('#compania').serialize(),
@@ -47,6 +47,8 @@ function submitComic(){
 			function(data){
 				if(data.exito == true){
 					alert("Exito");
+					window.location.href = "altaComic.php";
+
 				}
 				else{
 					alert("Error");
