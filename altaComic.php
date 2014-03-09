@@ -43,7 +43,7 @@
         <div class="col-md-10" id="maincontent">
           <div class="panel panel-default">
             <div class="panel-heading">
-            <h3 class="panel-title">Alta de Comic.</h3>
+              <h3 class="panel-title">Alta de Comic.</h3>
             </div>
             <div class="panel-body">
               <form class="form" role="form" id="comic">
@@ -110,37 +110,43 @@
                       </div>
                     </div>
                     <div class="col-md-3">
-                     <div class="form-group">
-                      <label class="control-label">Precio de Portada: </label>
-                      <input type="text" class="form-control" id="inputEmail3" placeholder="Precio de Portada" name="cat_comic_precio_portada">
+                      <div class="form-group">
+                        <label class="control-label">Precio de Portada: </label>
+                        <input type="text" class="form-control" id="inputEmail3" placeholder="Precio de Portada" name="cat_comic_precio_portada">
+                      </div>
+                    </div>
+                    <div class="col-md-3">
+                      <label class="control-label">Rareza</label>
+                          <select class="form-control" name="cat_comic_idioma">
+                            <option value="comun">Comun</option>
+                            <option value="incomun">Incomun</option>
+                            <option value="raro">Raro</option>
+                          </select>
                     </div>
                   </div>
-
-                  <div class="col-md-3">
-                    <div class="form-group">
-                      <button class="btn btn-success" type="submit">Guardar</button>  
+                  <div class="row">
+                    <div class="col-md-3">
+                      <div class="form-group">
+                        <button class="btn btn-success" type="submit">Guardar</button>  
+                      </div>
                     </div>
                   </div>
-
                 </div>
 
+              </form>
+            </div>
 
-              </div>
 
-            </form>
           </div>
 
-
         </div>
-
       </div>
+
     </div>
 
+
+
+
   </div>
-
-
-
-
-</div>
 </body>
 </html>
