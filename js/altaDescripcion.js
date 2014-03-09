@@ -2,7 +2,7 @@ var rango = 10;
 $(document).ready(function(){
 	$("#navbar").load("../html/layouts/navbar_layout.html");
 	$("#sidebar").load("../html/layouts/sidebar_layout.html", function(){
-		$("#sidebar").find("#4").attr("class", "active");
+		$("#sidebar").find("#2").attr("class", "active");
 	});
 	
 	$("#modal").load("../html/layouts/modal_pedido_pendiente_layout.html");

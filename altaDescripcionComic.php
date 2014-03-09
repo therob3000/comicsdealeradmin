@@ -43,7 +43,7 @@
         <div class="col-md-10" id="maincontent">
           <div class="panel panel-default">
             <div class="panel-heading">
-              <h3 class="panel-title">Alta de Comic.</h3>
+              <h3 class="panel-title">Alta de Comic</h3>
             </div>
             <div class="panel-body">
               <div class="row">
@@ -67,7 +67,7 @@
                     </div>
                     <div class="form-group">
                       <label class="control-label">Titulo</label>
-                      <input type="text" class="form-control" placeholder="URL de Imagen" name="datos_comic_titulo">
+                      <input type="text" class="form-control" placeholder="Titulo Unico del Comic" name="datos_comic_titulo">
                     </div>
                     
                     <div class="form-group">
@@ -85,21 +85,23 @@
                 </form>
               </div>
               <div class="row" id="datos">
-                <table class="table table-condensed">
-                  <thead>
-                    <tr>
-                      <th>ID</th>
-                      <th>Titulo</th>
-                      <th>Descripcion</th>
-                    </tr>
-                  </thead>
-                  <tbody id="datos_comic">
+                <div class="col-md-12">
+                  <table class="table table-condensed">
+                    <thead>
+                      <tr>
+                        <th>ID</th>
+                        <th>Titulo</th>
+                        <th>Descripcion</th>
+                      </tr>
+                    </thead>
+                    <tbody id="datos_comic">
 
-                  </tbody>
-                </table>
-                <ul class="pagination" id="paginacion">
+                    </tbody>
+                  </table>
+                  <ul class="pagination" id="paginacion">
 
-                </ul>
+                  </ul>
+                </div>
 
 
 

@@ -72,11 +72,17 @@
                     </div>
                     <div class="row">
 
-                      <div class="col-md-6">
+                    <div class="col-md-6">
                         <div class="form-group">
-                          <label class="control-label">Titulo</label>
-                          <input type="text" class="form-control" id="inputEmail3" placeholder="Titulo del Comic" name="cat_comic_titulo">
+                          <label class="control-label">Descripcion/Titulo: </label>
+
+                          <select class="form-control" id="descripcion" name="cat_comic_descripcion_id"></select>
+                          
                         </div>
+                      </div>
+
+                      <div class="col-md-6">
+                          
                         <div class="form-group">
                           <label class="control-label">Idioma</label>
                           <select class="form-control" name="cat_comic_idioma">
@@ -86,14 +92,7 @@
                         </div>
                       </div>
 
-                      <div class="col-md-6">
-                        <div class="form-group">
-                          <label class="control-label">Descripcion: </label>
-
-                          <textarea class="form-control" rows="3" name="cat_comic_descripcion"></textarea>
-                          
-                        </div>
-                      </div>
+                      
 
                     </div>
                     <div class="row">
@@ -117,7 +116,7 @@
                     </div>
                     <div class="col-md-3">
                       <label class="control-label">Rareza</label>
-                          <select class="form-control" name="cat_comic_idioma">
+                          <select class="form-control" name="cat_comic_rareza">
                             <option value="comun">Comun</option>
                             <option value="incomun">Incomun</option>
                             <option value="raro">Raro</option>

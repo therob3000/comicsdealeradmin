@@ -1,7 +1,7 @@
 $(document).ready(function(){
 	$("#navbar").load("../html/layouts/navbar_layout.html");
 	$("#sidebar").load("../html/layouts/sidebar_layout.html",function(){
-		$("#sidebar").find("#3").attr("class","active");
+		$("#sidebar").find("#").attr("class","active");
 	});
 	$("#modal").load("../html/layouts/modal_pedido_pendiente_layout.html");
 	cargarCompanias();
