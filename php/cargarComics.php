@@ -10,7 +10,10 @@
 	$json = new stdClass();
 	$arrayComics = array();
 
-	$queryComics = "SELECT * FROM cat_comics WHERE cat_comic_personaje_id = $cat_comic_personaje_id";
+	$queryComics = "SELECT cat_comic_unique_id, (SELECT datos_comic_titulo FROM datos_comics WHERE datos_comic_id = cat_comic_descripcion_id) as cat_comic_titulo,
+	cat_comic_numero_ejemplar,
+	cat_comic_precio_portada 
+	FROM cat_comics WHERE cat_comic_personaje_id = $cat_comic_personaje_id";
 	$query = mysql_query($queryComics);
 	$num = mysql_num_rows($query);
 
