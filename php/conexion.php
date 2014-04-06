@@ -21,6 +21,7 @@
 	else{
 		//echo "Funciona la pinche conexion";
 		mysql_select_db($db);
+		mysql_query('SET CHARACTER SET utf8');
 		return($con);
 	}
 }*/
@@ -54,6 +55,7 @@ function conexion(){
 	//Seleccionamos la base de datos a usar
 	else{
 		mysql_select_db("heroku_ee0f158613570e0", $con);
+		mysql_query('SET CHARACTER SET utf8');
 		return($con);
 	}
 }*/
@@ -70,6 +72,7 @@ function conexion(){
 	//Seleccionamos la base de datos a usar
 	else{
 		mysql_select_db("heroku_ee0f158613570e0", $con);
+		mysql_query('SET CHARACTER SET utf8');
 		return($con);
 	}
 }*/

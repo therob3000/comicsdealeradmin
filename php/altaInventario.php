@@ -9,17 +9,19 @@
 	$inventario_comprador           = $_REQUEST['inventario_comprador'];
 	$inventario_precio_entrada 		= $_REQUEST['inventario_precio_entrada'];
 	$inventario_precio_salida		= $_REQUEST['inventario_precio_salida'];
+	$inventario_integridad			= $_REQUEST['inventario_integridad'];
 
 	$json = new stdClass();
 
 	$queryInsertaInventario = "INSERT INTO inventario VALUES('',
-															 '$inventario_cat_comic_unique_id',
-															 '$inventario_comprador',
-															 '$inventario_precio_entrada',
-															 '$inventario_precio_salida',
+															'$inventario_cat_comic_unique_id',
+															'$inventario_comprador',
+															'$inventario_precio_entrada',
+															'$inventario_precio_salida',
 															 1,
 															 CURDATE(),
-															 NULL)";
+															 NULL,
+															 '$inventario_integridad')";
 	
 	$queryExito = mysql_query($queryInsertaInventario);
 
@@ -38,3 +40,5 @@
 		$queryActualizaNumero = "UPDATE cat_comics SET cat_comic_copias = cat_comic_copias +1 WHERE cat_comic_unique_id = $unique_id";
 		mysql_query($queryActualizaNumero);
 	}
+
+?>
