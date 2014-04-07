@@ -69,23 +69,7 @@
                         </div>
                       </div>
 
-                      <div class="col-md-3">
-                        <div class="form-group">
-                          <label class="control-label">Integridad</label>
-                          <select class="form-control" id="integridad" name="inventario_integridad">
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                            <option value="6">6</option>
-                            <option value="7">7</option>
-                            <option value="8">8</option>
-                            <option value="9">9</option>
-                            <option value="10">10</option>
-                          </select> 
-                        </div>
-                      </div>
+                      
                       
                       
 
@@ -124,6 +108,26 @@
                       </div>
                     </div>
 
+                    <div class="row">
+                    <div class="col-md-3">
+                        <div class="form-group">
+                          <label class="control-label">Integridad</label>
+                          <select class="form-control" id="integridad" name="inventario_integridad">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                          </select> 
+                        </div>
+                      </div>
+                      
+                    </div>
                     <div class="row">
                       <div class="col-md-4">
                         <button class="btn btn-success" type="submit">Guardar en Inventario</button>
