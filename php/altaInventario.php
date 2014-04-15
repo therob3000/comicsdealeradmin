@@ -19,7 +19,7 @@
 															'$inventario_precio_entrada',
 															'$inventario_precio_salida',
 															 1,
-															 CURDATE(),
+															 NOW(),
 															 NULL,
 															 '$inventario_integridad')";
 	
