@@ -15,7 +15,7 @@
   <script src="js/altaComic.js"></script>
   <style type="text/css">
     .container-full{
-      width: 100%
+      width: 100%;
       margin: auto;
     }
 
