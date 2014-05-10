@@ -7,7 +7,9 @@
 
 	$datos_comic_personaje_id = $_REQUEST['datos_comic_personaje_id'];
 	$datos_comic_titulo = $_REQUEST['datos_comic_titulo'];
-	$datos_comic_descripcion = $_REQUEST['datos_comic_descripcion'];
+	$datos_comic_descripcion = addslashes($_REQUEST['datos_comic_descripcion']);
+    
+    //echo $datos_comic_descripcion;
 
 	$json = new stdClass();
 
