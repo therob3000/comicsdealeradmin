@@ -62,11 +62,16 @@
                       <label class="control-label">URL Imagen</label>
                       <input type="text" class="form-control" placeholder="URL de Imagen" name="cat_paquete_imagen_url">
                     </div>
-                    
-
                   </div>
                 </form>
               </div>
+               
+                <div class="row">
+                      <div class="col-md-6">
+                        <button class="btn btn-success" type="submit">Guardar Datos</button>
+                      </div>
+                    </div>
+                
               <div class="row" id="datos">
                 <div class="col-md-12">
                   <table class="table table-condensed">

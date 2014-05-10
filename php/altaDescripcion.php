@@ -12,9 +12,9 @@
 	$json = new stdClass();
 
 	$queryInsertaDatosComic = "INSERT INTO datos_comics VALUES('',
-																'$datos_comic_titulo',
-																'$datos_comic_descripcion',
-																'$datos_comic_personaje_id')";
+                                                                '$datos_comic_titulo',
+                                                                '$datos_comic_descripcion',
+                                                                '$datos_comic_personaje_id')";
 	//echo $queryInsertaDatosComic;
 	$queryExito = mysql_query($queryInsertaDatosComic);
 
