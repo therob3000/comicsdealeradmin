@@ -9,9 +9,10 @@
   <!-- Bootstrap -->
   <link href="bootstrap/css/bootstrap.css" rel="stylesheet" media="screen">
   <link rel="shortcut icon" href="img/ComicDico-01.png">
-
+ 
   <script src="bootstrap/assets/js/jquery.js"></script>
   <script src="bootstrap/js/bootstrap.min.js"></script>
+  <script src="js/altaPaquete.js"></script>
   <style type="text/css">
     .container-full{
       width: 100%;
@@ -46,7 +47,7 @@
             </div>
             <div class="panel-body">
               <div class="row">
-                <form class="form" role="form" id="descripcion">
+                <form class="form" role="form" id="paquete">
                   <div class="col-md-6 col-md-offset-3">
                     <div class="form-group">
                       <label class="control-label">Titulo</label>
@@ -63,39 +64,16 @@
                       <input type="text" class="form-control" placeholder="URL de Imagen" name="cat_paquete_imagen_url">
                     </div>
                   </div>
-                </form>
-              </div>
-               
-                <div class="row">
+                    <div class="row">
                       <div class="col-md-6">
                         <button class="btn btn-success" type="submit">Guardar Datos</button>
                       </div>
                     </div>
-                
-              <div class="row" id="datos">
-                <div class="col-md-12">
-                  <table class="table table-condensed">
-                    <thead>
-                      <tr>
-                        <th>ID</th>
-                        <th>Titulo</th>
-                        <th>Descripcion</th>
-                      </tr>
-                    </thead>
-                    <tbody id="datos_comic">
-
-                    </tbody>
-                  </table>
-                  <ul class="pagination" id="paginacion">
-
-                  </ul>
-                </div>
-
-
-
+                </form>
               </div>
-
-
+               
+                
+                
             </div>
 
           </div>
