@@ -25,7 +25,7 @@
 		return($con);
 	}
 }*/
-
+    
 //funcion para la conexion Free MySQL Hosting
 function conexion(){
 	//Definimos los parametros de conexion, host, usuario, password
@@ -42,6 +42,8 @@ function conexion(){
 		return($con);
 	}
 }
+
+
 
 //funcion para la conexion local MAMP
 /*function conexion(){

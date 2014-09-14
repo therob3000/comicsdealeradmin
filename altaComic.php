@@ -135,14 +135,14 @@
                                                 </select>
                                             </div>
 
-                                            <div class="form-group">
+<!--                                            <div class="form-group">
                                                 <label class="control-label">Fecha Lanzamiento</label>
                                                 <div class="input-group date" id="datetimepicker1" data-date-format="YYYY-MM-DD">
                                                     <input type="date" class="form-control" name="cat_comic_fecha"/>
                                                     <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span>
                                                     </span>
                                                 </div>
-                                            </div>
+                                            </div>-->
                                         </div>
 
                                     </div>

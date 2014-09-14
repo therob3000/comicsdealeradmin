@@ -22,7 +22,13 @@
 															 NOW(),
 															 NULL,
 															 '$inventario_integridad',
-															 1)";
+															 1,
+                                                                                                                         NULL,
+                                                                                                                         NULL,
+                                                                                                                         NULL,
+                                                                                                                         NULL,
+                                                                                                                         NULL,
+                                                                                                                         NULL)";
 	
 	$queryExito = mysql_query($queryInsertaInventario);
 

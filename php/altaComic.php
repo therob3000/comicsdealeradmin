@@ -13,7 +13,7 @@
 	$cat_comic_idioma			= $_REQUEST['cat_comic_idioma'];
 	$cat_comic_rareza			= $_REQUEST['cat_comic_rareza'];
     $cat_comic_precio_tienda    = $_REQUEST['cat_comic_precio_tienda'];
-    $cat_comic_fecha            = $_REQUEST['cat_comic_fecha'];
+    //$cat_comic_fecha            = $_REQUEST['cat_comic_fecha'];
 
 
 	$json = new stdClass();
@@ -32,8 +32,8 @@
 														'$cat_comic_idioma',
 														1,
 														'$cat_comic_rareza', 
-                                                        '$cat_comic_precio_tienda',
-                                                        '$cat_comic_fecha')";
+                                                                                                                '$cat_comic_precio_tienda',
+                                                                                                                 NULL,0,0)";
 	$queryExito = mysql_query($queryInsertaComic);
 
 	if($queryExito == true){
